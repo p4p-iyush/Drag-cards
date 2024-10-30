@@ -88,3 +88,18 @@ papers.forEach((paper) => {
   const p = new Paper();
   p.init(paper);
 });
+
+// Prompt the user for input
+const userName = prompt("Enter your name:");
+
+// If input is provided, show the main page with a greeting
+if (userName) {
+  const mainPage = document.getElementById('mainPage');
+  const greetingMessage = document.getElementById('greetingMessage');
+
+  greetingMessage.textContent = `Hello, ${userName}! 💖 `;
+  mainPage.style.display = 'block';
+} else {
+  alert("You must enter your name to proceed!");
+  location.reload(); // Reloads the page if no input is provided
+}
