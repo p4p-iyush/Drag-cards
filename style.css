@@ -68,23 +68,30 @@ img {
   background-repeat: no-repeat;
   opacity: 0.6;
 }
+
 .paper.heart:hover::after {
   animation: heart_tinkling 0.5s ease-in-out;
 }
 
 @keyframes heart_tinkling {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(0deg);
   }
+
   20% {
     transform: rotate(15deg);
   }
+
   40% {
     transform: rotate(-15deg);
   }
+
   60% {
     transform: rotate(10deg);
   }
+
   80% {
     transform: rotate(-10deg);
   }
@@ -97,8 +104,46 @@ p {
   color: rgb(0, 0, 20);
   opacity: 0.75;
   user-select: none;
-  filter: drop-shadow(2px 1.5px 1px rgba(1, 1, 20, 0.9));
+  filter: drop-shadow(2px 1.5px 1px rgba(2, 2, 121, 0.9));
   font-family: "Smooch";
   font-weight: 400;
   font-style: normal;
+}
+.page2 {
+  width: 60%;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .paper {
+    padding: 10px 20px;
+    /* width: 90%; */
+    transform: rotateZ(0deg);
+  }
+
+ 
+
+  p {
+    font-size: 30px;
+  }
+
+  /* img {
+    max-height: 100px;
+  } */
+}
+
+/* Tablet View (600px - 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .paper {
+    padding: 15px 50px;
+    /* width: 70%; */
+    transform: rotateZ(-2deg);
+  }
+
+  p {
+    font-size: 45px;
+  }
+
+  /* img {
+    max-height: 120px;
+  } */
 }
